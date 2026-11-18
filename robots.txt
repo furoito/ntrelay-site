@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /affiliate-factory-oauth-
+Disallow: /mcp/
+Disallow: /.well-known/
+Disallow: /ntrelay-probe.txt
+Disallow: /privacy/
+Disallow: /terms/
+Disallow: /support/
