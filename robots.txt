@@ -7,3 +7,4 @@ Disallow: /ntrelay-probe.txt
 Disallow: /privacy/
 Disallow: /terms/
 Disallow: /support/
+Sitemap: https://ntrelay.com/sitemap.xml
