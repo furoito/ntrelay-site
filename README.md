@@ -38,6 +38,7 @@ The contact form uses FormSubmit and may require re-activation when the origin h
 - `ai-commerce-check/assets/check.js` — 診断結果表示（HTML組み立てはtextContent使用）
 - `ai-commerce-check/api.php` — 診断API（POST/JSONのみ）
 - `ai-commerce-check/lib.php` — HTML検査、HTTPS取得、DNS/SSRF対策、回数制限
+- `tests/ai-commerce-check-test.php` — 単体テスト。公開ディレクトリに配置しない
 
 **必要な本番環境**: PHP 8.1以上、cURL、DNS取得関数、書き込み可能な`sys_get_temp_dir()`。本番サーバーでエンドツーエンドの成功確認は未実施。公開前に代表的なEC商品URLで実通信を確認すること。
 
@@ -45,4 +46,4 @@ The contact form uses FormSubmit and may require re-activation when the origin h
 
 **公開手順**: 既存のConoHa上の`public_html/ntrelay.com/`に`ai-commerce-check/`ディレクトリだけを追加し、別途`agentic-commerce/index.html`、ルート`index.html`、`sitemap.xml`の差分を確認して反映。OAuth/MCP/.well-known等の既存ファイルは変更しない。
 
-**テスト**: `php -l`、`node --check`、不正URL拒否、正常なProduct JSON-LD、構造化データが欠落する場合を検証。商品ページの静的HTMLだけを確認するためWallet決済の成功やOpenAI推奨を判定したり、`Product` JSON-LDをOpenAIフィードの代替と扱ったりしない。
+**テスト**: `php tests/ai-commerce-check-test.php`、`php -l`、`node --check`、不正URL拒否、正常なProduct JSON-LD、構造化データが欠落する場合を検証。商品ページの静的HTMLだけを確認するためWallet決済の成功やOpenAI推奨を判定したり、`Product` JSON-LDをOpenAIフィードの代替と扱ったりしない。
