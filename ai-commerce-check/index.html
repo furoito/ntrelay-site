@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0b0d0f">
+<meta name="robots" content="index,follow">
+<title>ECサイトのAI購買対応・無料URL診断｜Product構造化データをチェック｜NT Relay</title>
+<meta name="description" content="ECサイトの商品詳細URLを入力するだけ。Product構造化データ、価格・通貨・在庫、noindex、robots.txt、サイトマップを無料で一次診断。ChatGPT向け商品データの改善候補を確認できます。">
+<link rel="canonical" href="https://ntrelay.com/ai-commerce-check/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="NT Relay">
+<meta property="og:title" content="ECサイトのAI購買対応・無料URL診断｜NT Relay">
+<meta property="og:description" content="商品詳細URLから、公開HTMLのProduct構造化データと機械可読性を無料で一次診断します。">
+<meta property="og:url" content="https://ntrelay.com/ai-commerce-check/">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600&family=Noto+Sans+JP:wght@400;500;600&family=Shippori+Mincho:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/ai-commerce-check/assets/check.css">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"ECサイトのAI購買対応・無料URL診断","url":"https://ntrelay.com/ai-commerce-check/","description":"公開商品ページのHTML構造化データと検索・アクセス準備を一次診断するツール","applicationCategory":"BusinessApplication","operatingSystem":"Web","isAccessibleForFree":true,"provider":{"@type":"Organization","name":"NT Relay","url":"https://ntrelay.com/"},"inLanguage":"ja-JP"}</script>
+</head>
+<body>
+<a class="skip" href="#main">本文へ移動</a>
+<header class="bar"><div class="wrap"><a href="/" class="brand" aria-label="NT Relay ホーム">NT RELAY<b>.</b></a>
+<nav class="nav" aria-label="サイト内メニュー">
+<a href="/agentic-commerce/">サービス</a>
+<a href="/ai-commerce-check/" aria-current="page">無料診断</a>
+<a href="/chatgpt-wallet-ec/">Wallet対応</a>
+<a class="nav-contact" href="/#contact">相談する ↗</a>
+</nav></div></header>
+<main id="main">
+<div class="wrap"><p class="breadcrumb"><a href="/">NT Relay</a>　/　<a href="/agentic-commerce/">AI購買対応</a>　/　無料URL診断</p></div>
+<section class="hero check-hero"><div class="wrap"><div>
+<span class="topline">AI COMMERCE / FREE URL CHECK</span>
+<h1>その商品ページ、<br><em>AIにも伝わる？</em></h1>
+<p class="lead">ECの商品詳細URLを入力するだけで、商品構造化データ、価格・通貨・在庫、検索向けメタ情報、公開ファイルの状態を診断します。</p>
+<div class="actions"><a class="button" href="#checker">無料で診断する ↓</a><a class="button ghost" href="#scope">診断できる範囲を見る</a></div>
+<p class="note">会員登録不要・クレジットカード不要 ／ 商品購入やサイト変更は行いません</p>
+</div><aside class="status-panel" aria-label="診断の3段階"><p class="mini">THREE STEPS TO A FIRST CHECK</p>
+<div class="flow-unit"><span class="num">01</span><strong>URLを入力</strong><span class="arrow">↘</span></div>
+<div class="flow-unit"><span class="num">02</span><strong>公開データを検査</strong><span class="arrow">↘</span></div>
+<div class="flow-unit"><span class="num">03</span><strong>改善候補を確認</strong><span class="arrow">↗</span></div>
+</aside></div></section>
+<section id="checker" class="check-section"><div class="wrap">
+<div class="section-head"><span class="eyebrow">SCAN A PRODUCT PAGE</span><h2>商品詳細ページのURLを入力</h2><p>商品単位の構造化データを見るため、トップページではなく<strong>商品詳細ページ</strong>を指定してください。公開URLのみ診断できます。</p></div>
+<form class="check-form" id="check-form">
+<label for="target-url">診断する商品ページURL</label>
+<div class="check-fields"><input id="target-url" name="url" type="text" inputmode="url" autocomplete="url" placeholder="https://example-shop.jp/products/item-123" required maxlength="2048" aria-describedby="input-note"><button type="submit" id="start-check" class="button">無料診断する <span aria-hidden="true">↗</span></button></div>
+<p id="input-note" class="field-note">HTTPSページを1件診断します。JavaScript描画後の情報やログイン必須ページには対応していません。</p>
+</form>
+<div id="check-message" class="check-message" role="status" aria-live="polite"></div>
+<section id="scan-result" class="results" hidden aria-label="診断結果">
+<div class="results-head"><div><span class="eyebrow">SCAN RESULT</span><h2>一次診断の結果</h2><p class="result-domain" id="result-domain"></p><p class="field-note" id="result-time"></p></div><button class="button ghost" type="button" id="copy-result">結果をコピー</button></div>
+<div class="metrics" aria-label="診断項目の内訳"><div class="metric"><strong id="metric-ok">0</strong><span>確認できた項目</span></div><div class="metric"><strong id="metric-attention">0</strong><span>改善候補</span></div><div class="metric"><strong id="metric-unknown">0</strong><span>未確認</span></div></div>
+<p class="field-note">良好・改善候補の数は商品ページの公開HTMLの確認結果であり、ChatGPTへの掲載率や売上を表すスコアではありません。</p>
+<div id="check-list" class="check-list"></div>
+<div class="report-note"><h3>この診断では確認できないこと</h3><ul id="result-limitations"></ul></div>
+<p class="result-cta"><a class="button" href="/#contact">改善内容をNT Relayに相談する <span aria-hidden="true">↗</span></a></p>
+</section>
+</div></section>
+<section id="scope"><div class="wrap"><div class="section-head"><span class="eyebrow">WHAT THIS TOOL DOES</span><h2>判定する項目と、判定しない項目。</h2><p>URLだけでわかる公開情報に限定して判定します。「確認できなかった」と「問題がある」を区別します。</p></div>
+<div class="grid"><article class="tile"><div class="tile-num">01</div><h3>公開HTMLを検査</h3><p>title・説明文・canonical・noindex・JSON-LDのProductとOffer・価格・通貨・在庫を確認します。</p></article>
+<article class="tile"><div class="tile-num">02</div><h3>公開ファイルを確認</h3><p>robots.txtとルートのsitemap.xmlが取得できるかを確認します。AIブラウザの通過可否までは確定しません。</p></article>
+<article class="tile"><div class="tile-num">03</div><h3>次の改善候補を提示</h3><p>観測できた不足と、実機で確認すべき項目を分けて提示します。結果はテキストでコピーできます。</p></article>
+<article class="tile"><div class="tile-num">04</div><h3>ウォレット・購入操作は対象外</h3><p>OpenAIのフィード登録、ChatGPTの推薦、Web Bot Auth、カート操作、決済完了は本ツールでは判定できません。</p></article></div>
+</div></section>
+<section id="guide"><div class="wrap"><div class="section-head"><span class="eyebrow">NEXT ACTIONS</span><h2>診断結果の先にある対応。</h2></div><div class="grid">
+<article class="tile"><h3>AI購買対応の全体像</h3><p>商品発見からチェックアウトまで、どこに改善余地があるかを段階別に確認。</p><a class="link" href="/agentic-commerce/">サービスと手順を見る ↗</a></article>
+<article class="tile"><h3>ChatGPT向け商品フィード</h3><p>商品ページの構造化データと、OpenAI Business Hubでの商品フィード登録は別物です。</p><a class="link" href="/chatgpt-product-feed/">商品フィードのガイド ↗</a></article></div></div></section>
+<section id="privacy"><div class="wrap"><div class="section-head"><span class="eyebrow">SAFETY & PRIVACY</span><h2>公開URLのみ、読み取り専用。</h2></div><div class="prose"><p>診断は対象ページと同じドメインの公開robots.txt・sitemap.xmlへのHTTPSアクセスだけで実施します。ログイン・購入・変更操作はしません。診断対象URLはアプリ独自のデータベースには保存せず、濫用防止のため接続元IPアドレスのハッシュと実行時刻を一時保存します。通信先サーバーには診断用アクセスが記録される場合があります。</p><p>本ツールはNT Relayの独自サービスであり、OpenAI公式の認証・推薦・Wallet対応診断ではありません。</p></div></div></section>
+<section id="sources"><div class="wrap"><div class="section-head"><span class="eyebrow">PRIMARY SOURCES</span><h2>仕様の参照先</h2></div><ol class="sources"><li><a href="https://developers.openai.com/commerce/guides/overview" target="_blank" rel="noopener noreferrer">OpenAI：Partner Playbook Overview</a></li><li><a href="https://developers.openai.com/commerce/guides/submit-product-feeds" target="_blank" rel="noopener noreferrer">OpenAI：商品フィードの提出</a></li><li><a href="https://developers.openai.com/commerce/agent-access" target="_blank" rel="noopener noreferrer">OpenAI：クラウドブラウザのアクセス</a></li><li><a href="https://developers.google.com/search/docs/appearance/structured-data/product" target="_blank" rel="noopener noreferrer">Google：Product構造化データ</a></li></ol></div></section>
+<section class="cta"><div class="wrap cta-inner"><div><span class="eyebrow">FROM FINDING TO FIXING</span><h2>チェックの先は、<br>必要な改善だけ。</h2><p>必要に応じて、商品データの整備・構造化データの修正・アクセスと購入導線の実地確認まで支援します。</p></div><div><a class="button" href="/#contact">NT Relayに相談する <span aria-hidden="true">↗</span></a><p class="note">診断結果をコピーしてお問い合わせフォームに貼り付けると、内容を共有できます。</p></div></div></section>
+</main>
+<footer class="foot"><div class="wrap foot-inner"><span>© 2026 NT Relay / Web・Automation・AI</span><span><a href="/">ホーム</a>　<a href="/privacy/">プライバシー</a>　<a href="/agentic-commerce/">AI購買対応</a></span></div></footer>
+<script src="/ai-commerce-check/assets/check.js" defer></script>
+</body></html>
